@@ -5,5 +5,7 @@ Cada carpeta contiene el modelo computacional del láser estabilizado en frecuen
 
 ![alt text](https://github.com/nicomn97/LaserESC-ModeloComputacional/blob/main/simulinkCompMod.png)
 
-En la subcarpeta de Registros se encuentran las mediciones experimentales del láser construido en el Laboratorio de Óptica Cuántica Experimental de la Universidad de los Andes. Además, se provee el código para la generación de los gráficos como cuaderno de Jupyter.
+Para generar los datos de las simulaciones, se puede correr el archivo de matlab con extensión ".m" en cada carpeta.
+
+En la subcarpeta de Registros se encuentran las mediciones experimentales del láser construido en el Laboratorio de Óptica Cuántica Experimental de la Universidad de los Andes, utilizados para evaluar el modelo computacional en el artículo. Además, se provee el código para la generación de los gráficos como cuaderno de Jupyter.
 
