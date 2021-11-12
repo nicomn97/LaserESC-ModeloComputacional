@@ -13,7 +13,7 @@ paramIntegral=ones(1,nCut);
 tInitPID=1;            %Tiempo de inicio de PID
 Slock=1500;            %Sensitividad de Lock In
 
-tSim=60*2;
+tSim=60*0.88;
 
 Cpzt=33;       % (MHz/V)
 Ci=-215;       % (MHz/V)
