@@ -13,7 +13,7 @@ paramIntegral=ones(1,nCut);
 tInitPID=5;            %Tiempo de inicio de PID
 Slock=1500;            %Sensitividad de Lock In
 
-tSim=60*5;
+tSim=60*1.9;
 
 Cpzt=33;       % (kHz/V)
 Ci=-22.5;      % (MHz/V)
@@ -25,9 +25,9 @@ I=1100;     % Inestable
 
 outUnstable = sim('laserESClazoCerrado',tSim);
 
-results = array2table([outUnstable.desarrolloFrecuencia.Time, outUnstable.desarrolloFrecuencia.Data, outUnstable.desarrolloVoltaje.Data, outUnstable.SalidaLockIn.Data, outUnstable.SalidaPI.Data]);
-results.Properties.VariableNames(1:5) = {'t','nu','Vpd','Verr','Vpi'};
-writetable(results,'Registros/simulacionInestable2.csv')
+results = array2table([outUnstable.desarrolloFrecuencia.Time, outUnstable.desarrolloFrecuencia.Data]);
+results.Properties.VariableNames(1:2) = {'t','nu'};
+writetable(results,'Registros/simulacionInestable.csv')
 
 Nu0R=10; 
 P=5;        % Estable
@@ -36,6 +36,6 @@ I=300;      % Estable
 
 outEstable = sim('laserESClazoCerrado',tSim);
 
-results = array2table([outEstable.desarrolloFrecuencia.Time, outEstable.desarrolloFrecuencia.Data, outEstable.desarrolloVoltaje.Data, outEstable.SalidaLockIn.Data, outEstable.SalidaPI.Data]);
-results.Properties.VariableNames(1:5) = {'t','nu','Vpd','Verr','Vpi'};
-writetable(results,'Registros/simulacionEstable2.csv')
+results = array2table([outEstable.desarrolloFrecuencia.Time, outEstable.desarrolloFrecuencia.Data]);
+results.Properties.VariableNames(1:2) = {'t','nu'};
+writetable(results,'Registros/simulacionEstable.csv')
